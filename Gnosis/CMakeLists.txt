@@ -13,7 +13,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 
-find_package(SDL3 REQUIRED)
+find_package(SDL3 QUIET)
+if(NOT SDL3_FOUND)
+FetchContent_Declare(
+	SDL3
+	GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
+	GIT_TAG origin/main
+	OVERRIDE_FIND_PACKAGE
+)
+FetchContent_MakeAvailable(SDL3)
+endif()
 
 find_package(glm QUIET)
 
