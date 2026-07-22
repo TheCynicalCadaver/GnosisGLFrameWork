@@ -59,6 +59,28 @@ Verts[3].TextureCords = { 0.0f, 1.0f};
 Verts[3].TextureID = TexID;
 }
 
+Quad::Quad(GLfloat x, GLfloat y, GLfloat z, GLfloat W, GLfloat H, GLfloat TexID){
+
+Verts[0].Position = {x, y, z};
+Verts[0].Color = {1.0f, 1.0f, 1.0f, 1.0f};
+Verts[0].TextureCords = {0.0f, 0.0f };
+Verts[0].TextureID = TexID;
+
+Verts[1].Position = {x + W, y, z};
+Verts[1].Color = {0.0f, 0.0f, 0.4f , 1.0f };
+Verts[1].TextureCords = {1.0f, 0.0f };
+Verts[1].TextureID = TexID;
+
+Verts[2].Position = {x + W, y + H, z};
+Verts[2].Color = {0.0f, 0.4f, 0.0f , 1.0f };
+Verts[2].TextureCords = { 1.0f, 1.0f};
+Verts[2].TextureID = TexID;
+
+Verts[3].Position = {x, y + H, z};
+Verts[3].Color = {0.4f, 0.0f, 0.0f, 1.0f};
+Verts[3].TextureCords = { 0.0f, 1.0f};
+Verts[3].TextureID = TexID;
+}
 Quad::Quad(glm::vec3 XYZ, glm::vec3 Col, GLfloat size, GLfloat TexID){
 
 }

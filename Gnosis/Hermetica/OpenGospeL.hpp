@@ -36,7 +36,8 @@ std::array<Vertex, 4> Verts;
 
 Quad(GLfloat x, GLfloat y, GLfloat z, GLfloat size, GLfloat TexID);
 Quad(glm::vec3 XYZ, glm::vec3 Col, GLfloat size, GLfloat TexID);
-	
+
+Quad(GLfloat x, GLfloat y, GLfloat z, GLfloat W, GLfloat H, GLfloat TexID);
 	   };	
 
 
