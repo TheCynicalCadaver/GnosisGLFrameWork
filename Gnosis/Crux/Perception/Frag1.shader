@@ -5,6 +5,7 @@ in vec4 PointColor;
 in vec2 FragTexCords;
 
 in float FragTexIndex;
+in float mixRatio;
 
 uniform sampler2D uniTexture[2];
 
@@ -12,5 +13,5 @@ void main(){
 
 int index = int(FragTexIndex);
 
-FragColor = texture(uniTexture[index], FragTexCords);
+FragColor = mix(PointColor, texture(uniTexture[index], FragTexCords), mixRatio);
 	   }
