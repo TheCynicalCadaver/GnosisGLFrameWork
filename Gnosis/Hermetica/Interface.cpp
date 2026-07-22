@@ -57,14 +57,7 @@ MagicBag.MakeShader("Crux/Perception/Vert1.shader",
 
 GL_Renderer GLR;
 
-Image Gubram("Crux/Perception/Gubram.png", true);
-Image bobram("Crux/test.png", true);
-
-GLR.Tex0 = Gubram.GL_ID;
-GLR.Tex1 = bobram.GL_ID;
-
-GLR.Init();
-
+Game Test(GLR);
 
 glUseProgram(MagicBag.FindShader("Shader1").GL_ID);
 auto loc = glGetUniformLocation(MagicBag.FindShader("Shader1").GL_ID, "uniTexture");

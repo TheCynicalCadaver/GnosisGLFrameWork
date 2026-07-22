@@ -1,7 +1,7 @@
 #ifndef INTERFACE_HPP
 #define INTERFACE_HPP
 
-#include "ResourceSack.hpp"
+#include "Game.hpp"
 
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
